@@ -71,6 +71,13 @@ module.exports = function (grunt) {
         hostname: 'localhost',
         livereload: 35729
       },
+      proxies:[{
+        context:'/api',
+        host:'paddypricetool-dev.herokuapp.com',
+        port:80,
+        xforward:false,
+        headers:{host:'paddypricetool-dev.herokuapp.com'}
+      }],
       livereload: {
         options: {
           open: true,

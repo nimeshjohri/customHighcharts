@@ -5,14 +5,8 @@ angular.module('customApp').directive('myCustomer', function() {
     restrict: 'ACE',
     link: function(scope, element, attr) {
       scope.$watch('Point', function (data) {
-        var cInput=[];
-        for(var i=0;i<data.length;i++){
-        var plot={};
-        plot.data=[data[i]];
-        cInput.push(plot);
-         }
-    	console.log(data);
-      console.log(cInput);      
+    
+          
     element.highcharts({
         chart: {
             type: 'column'
@@ -48,7 +42,7 @@ angular.module('customApp').directive('myCustomer', function() {
         tooltip: {
             pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
         },
-        series: cInput
+        series:[scope.Point]
     })
   }, true);
 },

@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Custom-Directive-Highchart</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -33,9 +33,9 @@
     <input type="text" ng-model="names">
     <input type="button" ng-click="addPoints()" value="ADD">
     <ul >
-    <li ng-repeat="options in Point">{{options}}</li>
+    <li ng-repeat="options in Point.data">{{options}}</li>
   </ul>
-     <div class="my-customer">
+     <div class="my-customer" xdata="Point">
      </div>
       <div class="header">
       </div>
@@ -93,6 +93,8 @@
         <script src="/scripts/customdir.js"></script>
         <script src="/scripts/highcharts.js"></script>
         <script src="/scripts/exporting.js"></script>
+        <script src="/scripts/something.js"></script>
+        <!-- endbuild -->
         <!-- endbuild -->
 </body>
 </html>
